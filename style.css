@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+body{
+    min-height: 100vh;
+    padding-top: 105px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 0px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+header .menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -18px;
+}
+
+header .navbar ul li, .btns ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar  ul li a,.btns ul li a{
+    font-size: 18px;
+    padding: 18px;
+    color: black;
+    display:block;
+    text-transform: capitalize;
+}
+
+header .navbar ul li a:hover, .btns ul li a:hover{
+    background: #00b2e3;
+    color: #fff;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+header .control{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+header .control .container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  header .control .container .search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+  }
+
+  header .control .container .search-container input{
+    width: 500px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  header .control .container .search-container input:focus{
+    outline: none; 
+    border-color: #00b2e3; 
+  }
+
+  header .control .container .search-container button{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background-color: #00b2e3;
+    border: none;
+  }
+
+  header .control .container .search-container button svg{
+    width: 30px;
+    height: auto; 
+    color:white
+  }
+
+  header .control .logo img{
+    width: 70px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  .container .locales{
+    background-color: #00b2e3;
+    padding: 3px;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .container .locales ul{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+
+
+  .container .locales ul li a {
+    color: white;
+    font-size: 13px;
+  }
+
+  section{
+    margin-top: 130px;
+    padding: 0px 2%;
+    display: flex;flex-direction: column;
+  }
+
+  section .search-box {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+  section .search-box ul li{
+    position: relative;
+    float: left;
+  }
+
+  section .search-box  ul li a{
+      font-size: 16px;
+      padding: 16px;
+      color: black;
+      display:block;
+      text-transform: capitalize;
+  }
+
+  .search-box ul li a:hover,
+  .btns ul li a:hover {
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  section span{
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  section .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items:center
+  }
+
+  section .options{
+    display: flex;
+    align-items: center;
+  }
+
+  #thematic {
+    width: 400px;
+    height: 40px;
+    outline: none;
+    padding: 10px;
+    margin-right: 30px;
+  }   
+
+  section .options .radio-btn label{
+    margin-right: 30px;
+    font-size: 14px;
+  }
+
+  #thematic option {
+      background-color: white;
+      color: black;
+  }
+
+
+  #thematic option:hover {
+      background-color: #00b2e3;
+      color: white; 
+  }
+  
+  section .wrapper .actions{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  section .wrapper .actions button{
+    width: 100%;
+    height: 40px; 
+    padding: 4px;
+    text-transform: capitalize;
+    border: none;
+    margin: 4px;
+    border: 1px solid #00b2e3;
+  }
+
+  section .wrapper .actions button:hover{
+   background:#00b2e3;
+   color: white;
+  }
+
+  section .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  section .title span{
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  section .box{
+    background-color: #ffffff; 
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+  }
+
+  section .box .image img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  section .box .content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  section .box .content p{
+    font-size: 18px;
+  }
+
+  section .box .content .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+
+  section .box .content .info .date{
+    text-transform: uppercase;
+  }
+
+  section .box .content .info .time{
+    text-transform: capitalize;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; 
+    margin-top: 20px;
+  }
+
+  @media (max-width: 441px) {
+    #thematic {
+      width: 300px;
+      padding: 5px;
+    }   
+    
+    header .control .logo img{
+      width: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 830px) {
+    section .wrapper, section .options{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    section .options select,.radio-btn{
+      margin-top: 10px;
+    }
+
+    section .wrapper .actions{
+      margin-top: 10px;
+      width: 250px;
+    }
+}
+
+
+  @media (min-width: 768px) {
+      .grid-container {
+          grid-template-columns: repeat(2, 1fr); 
+      }
+  }
+
+  @media (min-width: 1200px) {
+      .grid-container {
+          grid-template-columns: repeat(4, 1fr);
+      }
+  }
+
+
+@media (max-width: 991px){ 
+
+    header{
+        padding: 20px;
+    }
+
+    header .menu{
+        margin-top: 0;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar {
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
+    header .control .container .search-container input {
+        width: 250px;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    
+      header .control .container .search-container button {
+        width: 100%;
+        max-width: 50px;
+        height: 30px; 
+        padding: 4px;
+      }
+
+      header .control .container .search-container button svg{
+        width: 20px;
+        height: auto; 
+        color:white
+      }
+    
+      .container .locales ul {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    
+      .container .locales li {
+        width: 45%;
+        margin-top: 4px;
+      }
+
+      header .navbar  ul li a,.btns ul li a{
+        font-size: 15px;
+        padding: 15px;
+    }
+}
