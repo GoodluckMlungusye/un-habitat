@@ -22,7 +22,6 @@ header{
     right: 0;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    padding: 0px 2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +34,6 @@ header .menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: -18px;
 }
 
 header .navbar ul li, .btns ul li{
@@ -83,7 +81,8 @@ header .control{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: #00b2e3; 
+  z-index: 2000;
 }
 
 header .control .container{
@@ -115,9 +114,12 @@ header .control .container{
   header .control .container .search-container button{
     width: 100px;
     height: 40px;
-    padding: 5px;
     background-color: #00b2e3;
-    border: none;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 
   header .control .container .search-container button svg{
@@ -126,11 +128,23 @@ header .control .container{
     color:white
   }
 
+  header .control .logo {
+     display: block;
+     background: #fff;
+     margin-left: 50px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     width: 125px;
+     height: 125px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
   header .control .logo img{
     width: 70px;
     height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 
 
@@ -210,7 +224,7 @@ header .control .container{
     margin-right: 30px;
   }   
 
-  section .options .radio-btn label{
+  section .options .checkbox-btn label{
     margin-right: 30px;
     font-size: 14px;
   }
@@ -255,10 +269,13 @@ header .control .container{
     margin-top: 20px;
   }
 
-  section .title .header{
+  .title .header {
     font-size: 30px;
     font-weight: bolder;
-  }
+    display: inline-block;
+    border-bottom: 3.5px solid #00b2e3;
+}
+
 
   section .title .faq-desc{
     font-size: 17px;
@@ -272,6 +289,38 @@ header .control .container{
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 30px;
   }
+
+  .image {
+    position: relative;
+    display: inline-block;
+}
+
+  .new {
+      width: 60px;
+      height: 32px;
+      background: #00b2e3;
+      position: absolute;
+      margin: auto;
+      margin-top: 20px;
+      top: 0;
+      left: 0;
+      line-height: 35px; 
+      text-align: center; 
+      color: white;
+  }
+
+  .new::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -32px;
+      transform: translateY(-50%);
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent; 
+      border-left: 35px solid #00b2e3;
+  }
+
+
 
   section .box .image img{
     width: 100%;
@@ -314,7 +363,7 @@ header .control .container{
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px; 
     margin-top: 20px;
   }
@@ -344,61 +393,24 @@ header .control .container{
 }
 
 
-  @media (max-width: 768px) {
-    .faq-items-container {
-        grid-template-columns: 1fr;
-    }
+
+
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1200px){ 
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); 
   }
-    
-
-  @media (max-width: 441px) {
-    #thematic {
-      width: 300px;
-      padding: 5px;
-    }   
-    
-    header .control .logo img{
-      width: 50px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin-right: 10px;
-    }
-}
-
-  @media (max-width: 830px) {
-    section .wrapper, section .options{
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    section .options select,.radio-btn{
-      margin-top: 10px;
-    }
-
-    section .wrapper .actions{
-      margin-top: 10px;
-      width: 250px;
-    }
 }
 
 
-  @media (min-width: 768px) {
-      .grid-container {
-          grid-template-columns: repeat(2, 1fr); 
-      }
-  }
+  @media (max-width: 991px){ 
 
-  @media (min-width: 1200px) {
-      .grid-container {
-          grid-template-columns: repeat(4, 1fr);
-      }
-  }
-
-
-@media (max-width: 991px){ 
-
-    header{
-        padding: 20px;
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); 
     }
 
     header .menu{
@@ -435,7 +447,6 @@ header .control .container{
         width: 100%;
         max-width: 50px;
         height: 30px; 
-        padding: 4px;
       }
 
       header .control .container .search-container button svg{
@@ -458,4 +469,74 @@ header .control .container{
         font-size: 15px;
         padding: 15px;
     }
+
+      header .control .logo {
+        margin-left: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 80px;
+        height: 80px;
+    }
+
+    header .control .logo img{
+      width: 50px;
+    }
+  }
+
+
+  @media (max-width: 830px) {
+    section .wrapper, section .options{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    section .options select,.checkbox-btn{
+      margin-top: 10px;
+    }
+
+    section .wrapper .actions{
+      margin-top: 10px;
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faq-items-container {
+      grid-template-columns: 1fr;
+  }
+  }
+
+  @media (max-width: 580px) {
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr); 
+    } 
+   }
+
+  @media (max-width: 441px) {
+    #thematic {
+      width: 300px;
+      padding: 5px;
+    }   
+
+    header .control{
+      align-items: flex-end;
+      justify-content: right;
+    }
+
+    header .control .logo {
+      display: none;
+   }
+
+   header .control .container .search-container input {
+    width: 320px;
+  }
+
+  header .control .container .search-container button {
+    width: 35px;
+  }
+
+  .container .locales li {
+    width: 20%;
+  }
+
 }
