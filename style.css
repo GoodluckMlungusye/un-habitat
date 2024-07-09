@@ -167,10 +167,68 @@ header .control .container{
     font-size: 13px;
   }
 
-  section{
+  .home{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home .hero{
+    width: 100%; 
+    height: 300px;
+    background-image: url('hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .hero h3{
+    color: white;
+  }
+
+  .hero-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+
+  .hero-actions button:nth-child(1) {
+    background-color: white;
+    color: #00689d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .hero-actions button:nth-child(2) {
+      background-color: #00689d; 
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+  }
+
+  .hero-actions button:nth-child(1):hover {
+      background-color: #00689d;
+      color: white;
+
+  }
+  .hero-actions button:nth-child(2):hover {
+    background-color: white;
+    color: #00689d;  }
+
+  .section{
     margin-top: 130px;
     padding: 0px 2%;
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   section .search-box {
@@ -276,8 +334,7 @@ header .control .container{
     border-bottom: 3.5px solid #00b2e3;
 }
 
-
-  section .title .faq-desc{
+  .desc{
     font-size: 17px;
     opacity: 0.5;
     margin-bottom: 15px;
