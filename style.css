@@ -412,6 +412,7 @@ div.gallery .item{
   background-color: var(--body-clr);
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 
 .webinar-wrapper{
@@ -421,15 +422,17 @@ div.gallery .item{
 }
 
 .webinar-img{
-  width: 40%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-right: 50px;
 }
 
 .webinar-img img{
   width: 100%;
   object-fit: cover;
+  border-radius: 30%;
 }
 
 .webinar-content{
@@ -441,11 +444,70 @@ div.gallery .item{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  background: var(--white);
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.svg-wrapper{
+  display: flex;
+  align-items:center;
+  padding-right: 30px;
 }
 
 .svg-wrapper svg{
-  width: 10px;
-  height: 10px;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  color: var(--primary);
+}
+
+.svg-wrapper span{
+  font-size: 12px;
+}
+
+.date-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+  padding: 4px 8px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.date-block span:nth-child(1){
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.date-block span:nth-child(2){
+    text-transform: capitalize;
+}
+
+
+.webinar-info div:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.webinar-info span{
+  text-align: left;
+}
+
+.location-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
         /* COURSES */
@@ -800,6 +862,20 @@ div.gallery .item{
     header .control .logo img{
       width: 50px;
     }
+  }
+
+  @media (max-width: 968px){ 
+    .webinar-wrapper{
+      flex-direction: column;
+   }
+   .webinar-img{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+   
   }
 
   @media (max-width: 943px){ 
