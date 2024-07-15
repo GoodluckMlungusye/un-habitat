@@ -189,53 +189,56 @@ header .control{
     flex-direction: column;
   }
 
-  .video-container{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  margin-top: -18px;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .video-content{
-    text-align: start;
-    padding-top: 450px;
-    padding-left: 45px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
 }
 
 .video-content a{
-    font-size: 23px;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    padding: 15px 25px;
-    transition: 0.3s;
+  font-size: 23px;
+  text-decoration: none;
+  padding: 15px 25px;
+  transition: 0.3s;
+  font-weight: 500;
 }
 
-.video-content a:hover{
-    background-color: #fff;
-    color: #000;
+.video-content a:nth-child(1){
+    color: var(--secondary);
+    background: var(--white); 
+    margin-right: 20px;
 }
 
-.background-clip{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+.video-content a:nth-child(1):hover{
+    background: var(--secondary);
+    color: var(--white);
 }
 
-@media (min-aspect-ratio:16/9) {
-    .background-clip{
-        width: 100%;
-        height: auto;
-    }
+.video-content a:nth-child(2){
+  background: var(--secondary);
+  color: var(--white);
 }
 
-@media (max-aspect-ratio:16/9) {
-    .background-clip{
-        width: auto;
-        height: 100%;
-    }
+.video-content a:nth-child(2):hover{
+  color: var(--secondary);
+  background: var(--white); 
 }
 
   .home .hero{
@@ -305,6 +308,7 @@ header .control{
     align-items: center;
     padding-left: 100px;
     padding-right: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 
@@ -1053,9 +1057,6 @@ div.gallery .item{
   .social-wrapper div{
     margin-right: 15px;
   }
-  .video-content{
-    padding-top: 350px;
-  }
 }
 
 
@@ -1079,13 +1080,6 @@ div.gallery .item{
   @media(max-width: 1024px){
     div.gallery .item{
       width: calc(50% - 8px);
-    }
-  }
-
-
-  @media(max-width: 1004px){
-    .video-content{
-      padding-top: 250px;
     }
   }
 
@@ -1370,6 +1364,16 @@ div.gallery .item{
     }
    }
 
+
+   @media (max-width: 520px) {
+    .video-content a{
+      font-size: 15px;
+      padding: 10px 12px;
+      font-weight: 400;
+    }
+
+   }
+
    @media (max-width: 500px) {
 
     header .control .container .search-container input{
@@ -1460,16 +1464,6 @@ div.gallery .item{
     }
   }
 
-  @media(max-width: 420px){
-
-    .video-content a{
-        font-size: 18px;
-        border: 2px solid #fff;
-        padding: 10px 20px;
-    }
-    
-}
-
   @media (max-width: 398px) {
     .copyright p{
       font-size: 13px;
@@ -1502,5 +1496,13 @@ div.gallery .item{
       margin-top: -5px;
     }
   }
+
+  @media (max-width: 365px) {
+    .video-content{
+      left: 30px;
+    }
+  }
+
+
 
 
